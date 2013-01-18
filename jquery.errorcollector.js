@@ -5,6 +5,7 @@
     };
     
     var methods = {
+        
     	init: function(params) {
     		
 			options = $.extend({}, defaults, params);
