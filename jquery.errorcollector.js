@@ -4,17 +4,13 @@
         text: 'Сообщение успешно отправлено'
     };
     
-    var options;
-    
     var methods = {
     	init: function(params) {
     		
-			options = $.extend({}, defaults, options, params);
-    		
-    		
-	    return this.each(function() {
-            
-	    });
+			options = $.extend({}, defaults, params);
+			return this.each(function() {
+				
+			});
     	},
         getSelectedText : function( options ) { 
             var selectedText;
