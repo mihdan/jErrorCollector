@@ -8,6 +8,10 @@
     
     var methods = {
     	init: function(params) {
+    		
+			options = $.extend({}, defaults, options, params);
+    		
+    		
 	    return this.each(function() {
             
 	    });
@@ -25,10 +29,7 @@
    
     };
      
-    $.fn.errorCollector = function(method){
-        
-        //options = $.extend({}, defaults, options, params);
-        
+    $.fn.errorCollector = function(method) {        
         if ( methods[method] ) {
         	return methods[ method ].apply( this, Array.prototype.slice.call( arguments, 1 ));
         } else if ( typeof method === 'object' || ! method ) {
