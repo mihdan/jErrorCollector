@@ -1,4 +1,4 @@
-(function($) { 
+(function($, window, undefined) { 
     
     var defaults = {
         text: 'Сообщение успешно отправлено'
@@ -37,4 +37,4 @@
         }        
         
     };
-})(jQuery);
+})(jQuery, window);
