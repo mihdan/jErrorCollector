@@ -8,6 +8,7 @@
     	init: function(params) {
     		
 			options = $.extend({}, defaults, params);
+			
 			return this.each(function() {
 				
 			});
