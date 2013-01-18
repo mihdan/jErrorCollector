@@ -1,6 +1,8 @@
 (function($) { 
     // значение по умолчанию - ЗЕЛЁНЫЙ
-    var defaults = { color:'green' };
+    var defaults = {
+        text: 'Сообщение успешно отправлено'
+    };
      
     // актуальные настройки, глобальные
     var options;
