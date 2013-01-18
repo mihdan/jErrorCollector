@@ -10,9 +10,10 @@
     $.fn.errorCollector = function(params){
         
         options = $.extend({}, defaults, options, params);
-         
         
- 
-        return this;
+        return this.each(function() {
+            
+        })
+        
     };
 })(jQuery);
