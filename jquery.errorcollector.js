@@ -7,6 +7,11 @@
     var options;
     
     var methods = {
+    	init: function(params) {
+	    return this.each(function() {
+            
+	    });
+    	},
         getSelectedText : function( options ) { 
             var selectedText;
             if (window.getSelection) {
@@ -20,13 +25,17 @@
    
     };
      
-    $.fn.errorCollector = function(params){
+    $.fn.errorCollector = function(method){
         
-        options = $.extend({}, defaults, options, params);
+        //options = $.extend({}, defaults, options, params);
         
-        return this.each(function() {
-            
-        })
+        if ( methods[method] ) {
+        	return methods[ method ].apply( this, Array.prototype.slice.call( arguments, 1 ));
+        } else if ( typeof method === 'object' || ! method ) {
+        	return methods.init.apply( this, arguments );
+        } else {
+        	$.error( 'Метод ' +  method + ' в jQuery.tooltip не существует' );
+        }        
         
     };
 })(jQuery);
